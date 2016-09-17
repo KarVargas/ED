@@ -45,16 +45,16 @@ public class Binaria extends Busquedas implements MOrdenamiento {
     @Override //Sirve para sobreescribir
     public void MSeleccion(int vector[]) { //Método de ordenamiento por selección
         int i, j, menor, posición, aux; //Declaramos variables a utilizar
-        for (i = 0; i < vector.length - 1; i++) { //Inicio del ciclo for 
-            menor = vector[i]; //Le damos el valor de la posicion 0 a la varibale menor
-            posición = i; //Guardamos su posición
-            for (j = i + 1; j < vector.length; j++) { //Inciamos otro for dentro del anterior
-                if (vector[j] < menor) { //Del array algún elemento
-                    menor = vector[j]; //Menor que el actual
+        for (i = 0; i < vector.length - 1; i++) { // inicio del ciclo for 
+            menor = vector[i]; // le damos el valor de la posicion 0 a la varibale menor
+            posición = i; // guardamos su posición
+            for (j = i + 1; j < vector.length; j++) { // Inciamos otro for dentro del anterior
+                if (vector[j] < menor) { // del array algún elemento
+                    menor = vector[j]; // menor que el actual
                     posición = j;
                 }
             }
-            if (posición != i) { //Si hay alguno menor se intercambia
+            if (posición != i) { // si hay alguno menor se intercambia
                 aux = vector[i];
                 vector[i] = vector[posición];
                 vector[posición] = aux;
@@ -64,13 +64,15 @@ public class Binaria extends Busquedas implements MOrdenamiento {
 
     @Override //Sirve para sobreescribir
     public void MBurbuja(int vector[]) { //Método de ordenamiento Burbuja
-        int i, j, aux; //Declaración de variables
-        for (i = 0; i < vector.length - 1; i++) { //Inicia el primer ciclo for para recorrer el vector
-            for (j = 0; j < vector.length - i - 1; j++) {//Se inicia el segundo ciclo para ordenar el vector
-                if (vector[j + 1] < vector[j]) { //Condición que establece que si el valor de la posicion j+1 es mayor que la posicion j pasara lo siguiente:
-                    aux = vector[j + 1]; //En la variable aux guardaremos el valor de j+1
-                    vector[j + 1] = vector[j]; //En j+1  guardamos el valor de j
-                    vector[j] = aux; //En j guardamos el valor previamente guardado en la variable aux
+        int i, j, aux;//Declaración de variables
+        for (i = 0; i < vector.length - 1; i++)//Inicia el primer ciclo for para recorrer el vector
+        {
+            for (j = 0; j < vector.length - i - 1; j++)//Se inicia el segundo ciclo para ordenar el vector
+            {
+                if (vector[j + 1] < vector[j]) {//Condición que establece que si el valor de la posicion j+1 es mayor que la posicion j pasara lo siguiente:
+                    aux = vector[j + 1];//en la variable aux guardaremos el valor de j+1
+                    vector[j + 1] = vector[j]; // en j+1  guardamos el valor de j
+                    vector[j] = aux;//y en j guardamos el valor previamente guardado en la variable aux
                 }
             }
         }
