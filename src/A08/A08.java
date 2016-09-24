@@ -16,7 +16,7 @@ public class A08 {
      */
     public static void main(String[] args) {
         doubleLnkList list = new doubleLnkList();
-        list.insertFirst("Hola Mundo");
+        list.insertFirst("Hola Mundo"); //
         list.showList();
         list.insertFirst(29);
         list.showList();

@@ -45,7 +45,10 @@ public class doubleLnkList <T> {
             last = node; //El apuntador first (que es atributo de la lista) apunta al nuevo nodo.
         }
     }
-    
+    /**
+     * 
+     * @return 
+     */
     private boolean isEmpty(){
         return first== null && last==null;
     }

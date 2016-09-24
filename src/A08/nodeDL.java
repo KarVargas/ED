@@ -14,7 +14,10 @@ public class nodeDL <T> {
     T data;
     nodeDL next;
     nodeDL prev;
-
+    /**
+     * 
+     * @param data 
+     */
     public nodeDL(T data) {
         this.data = data;
         this.next = null;
