@@ -16,7 +16,7 @@ public class A08 {
      */
     public static void main(String[] args) {
         doubleLnkList list = new doubleLnkList();
-        list.insertFirst("Hola Mundo"); //
+        list.insertFirst("Hola Mundo"); 
         list.showList();
         list.insertFirst(29);
         list.showList();
@@ -24,11 +24,11 @@ public class A08 {
         list.showList();
         list.searchNode("Hola Mundo");
         list.showList();
-        list.eNode("Hola");
-        list.deleteLast();
+        list.eNode("Hola Mundo");
         list.showList();
         list.showListRever();
-        
+        list.deleteLast();
+        list.showList();
     }
     
 }
