@@ -58,7 +58,7 @@ public class doubleLnkList <T> {
      * @return dependiendo ya que si regresa null significa que la lista está vacía o que el nodo no se encuentra dentro de la lista, o regresa el nodo en el caso de que si lo encuentre.
      */
     public nodeDL searchNode(T data){
-        nodeDL t;
+        nodeDL t; //Declaro un nodo temporal.
         if (isEmpty()){ //Si está vacío retorna falso.
             System.out.println("La lista está vacía."); //Imprime comentario.
             return null;
@@ -66,12 +66,12 @@ public class doubleLnkList <T> {
             t = first; //Colocamos auxiliar al inicio de la lista.
             while (t.data != data && t != last){ //Mientras que no encuentre el dato o no llegue al final de la lista, recorre la lista.
                 t = t.next; //Recorre la lista, dando valor del apuntador para avanzar.
-            }
-            if (t.data == data) {
-                System.out.println("El nodo solicitado si se encuentra dentro de la lista.");
+            } 
+            if (t.data == data) { //Si el valor del nodo es igual a la información que se esta buscando.
+                System.out.println("El nodo solicitado si se encuentra dentro de la lista."); //Imprime comentario.
                 return t;
-            } else {
-                System.out.println("El nodo no se encuentra dentro de la lista.");
+            } else { //Si el valor del nodo es diferente a la información que se esta buscando.
+                System.out.println("El nodo no se encuentra dentro de la lista."); //Imprime comentario.
                 return null;
             }
             /*if(t.data==data){return t;} //lo encontro y regresa el nodo
@@ -86,7 +86,7 @@ public class doubleLnkList <T> {
     public boolean eNode(T data){
         nodeDL t = searchNode(data);
         if (t == null) { //Si el nodo no existe.
-            System.out.println("No se encontró el nodo"); //Imprime comentario.
+            System.out.println("No se encontró el nodo."); //Imprime comentario.
             return false;
         } else { //Si el nodo existe.
             if (t == first) { //Si el nodo se encuentra en la primera posición.
@@ -104,7 +104,7 @@ public class doubleLnkList <T> {
      */
     public void deleteFirst(){
         //Movemos al apuntador first al siguiente nodo y el previo de este lo ponemos null
-        first = first.next; //Inicializamos first con el apuntador de first, para que así first pase a su apuntador y olvide el nodo en el que se encontraba.
+        first = first.next; //Inicializamos first con el apuntador "SIGUIENTE" de first, para que así first pase a su apuntador y olvide el nodo en el que se encontraba.
         first.prev = null;
     }
     /**
@@ -112,42 +112,42 @@ public class doubleLnkList <T> {
      */
     public void deleteLast(){
         //Movemos al apuntador last al nodo anterior y el next de este ultimo lo ponemos a null
-        last = last.prev;
+        last = last.prev; //Inicializamos last con el apuntador "ANTERIOR" de last, para que así last pase a su apuntador y olvide el nodo en el que se encontraba.
         last.next = null;
     }
     /**
      * Este método muestra la lista completa con nodos en el caso de tener, por el contrario, te arroja un comentario diciendote que la lista está vacía.
      */
     public void showList(){
-        if (!isEmpty()){
-            nodeDL t;
-            t = (nodeDL) first;
-            System.out.print("☠<=>");
-            while(t!=null){
-                System.out.print("[|"+t.data+"|]<=>");
-                t=t.next;
-            }
-            System.out.println("☠");
-        } else {
-            System.out.println("La lista está vacía");
-        }
+        if (!isEmpty()){ //Si la lista no está vacía.
+            nodeDL t; //Declaramos nodo temporal.
+            t = (nodeDL) first; //Donde nodo será igual a first (al inicio).
+            System.out.print("☠<=>"); //Imprime comentario.
+            while(t != null){ //Mientras el nodo sea diferente a null, recorrera la lista. Una vez sea null, se sale del ciclo.
+                System.out.print("[|"+t.data+"|]<=>"); //Imprime comentario, mientras imprime la información del nodo.
+                t = t.next; //El nodo será igual a su apuntador "SIGUIENTE", para así recorrer toda la lista.
+            } //Fin del ciclo.
+            System.out.println("☠"); //Imprime comentario.
+        } else { //En caso de que la lista este vacía.
+            System.out.println("La lista está vacía"); //Imprime comentario.
+        } //Fin de la condición.
     }
     /**
      * Este método muestra la lista completa con nodos en el caso de tener pero es de fin a inicio, es decir, lo contrario del método showList, por el contrario, te arroja un comentario diciendote que la lista está vacía.
      */
     public void showListRever(){
-        if (!isEmpty()){
-            nodeDL t;
-            t = (nodeDL) last;
-            System.out.print("☠<=>");
-            while(t!=null){
-                System.out.print("[|"+t.data+"|]<=>");
-                t=t.prev;
+        if (!isEmpty()){ //Si la lista no está vacía.
+            nodeDL t; //Declaramos nodo temporal.
+            t = (nodeDL) last; //Donde nodo será igual a last (al final).
+            System.out.print("☠<=>"); //Imprime comentario.
+            while(t != null){ //Mientras el nodo sea diferente a null, recorrera la lista. Una vez sea null, se sale del ciclo.
+                System.out.print("[|"+t.data+"|]<=>"); //Imprime comentario, mientras imprime la información del nodo.
+                t = t.prev; //El nodo será igual a su apuntador "ANTERIOR", para así recorrer toda la lista.
             }
-            System.out.println("☠");
-        } else {
-            System.out.println("La lista está vacía");
-        }
+            System.out.println("☠"); //Imprime comentario.
+        } else { //En caso de que la lista este vacía.
+            System.out.println("La lista está vacía"); //Imprime comentario.
+        } //Fin de la condición.
     }
     /*
     public boolean deleteNode(T data){

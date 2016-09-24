@@ -10,13 +10,14 @@ package A08;
  * @author CarlosManuel
  */
 public class nodeDL <T> {
-    
+    //Attibutes
     T data;
     nodeDL next;
     nodeDL prev;
+    //Methods
     /**
-     * 
-     * @param data 
+     * Este método es el constructor.
+     * @param data es la información importante.
      */
     public nodeDL(T data) {
         this.data = data;

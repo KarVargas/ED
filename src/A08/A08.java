@@ -20,15 +20,19 @@ public class A08 {
         list.showList();
         list.insertFirst(29);
         list.showList();
+        list.insertFirst(true);
+        list.showList();
+        list.insertLast(false);
+        list.showList();
         list.insertLast(3.4);
         list.showList();
-        list.searchNode("Hola Mundo");
+        //list.searchNode("Hola Mundo");
         list.showList();
-        list.eNode("Hola Mundo");
+        list.eNode("Hoa Mundo");
         list.showList();
-        list.showListRever();
         list.deleteLast();
         list.showList();
+        list.showListRever();
     }
     
 }
