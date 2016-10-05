@@ -28,7 +28,7 @@ public class circularList {
         c.insert(3);
         c.showList();
         //c.searchNode("Hola Mundo");
-        c.showList();
+        //c.showList();
         c.deleteNode("Hola Mundo");
         c.showList();
         c.deleteNode(false);
