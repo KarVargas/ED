@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package T03;
+import EstructuradeDatos.*;
 
 /**
  *
@@ -17,12 +18,14 @@ public class T03 {
     public static void main(String[] args) {
         // TODO code application logic here
         Contacto c = new Contacto("Francisco", 123456789);
-        Stack s = new Stack();
-        s.push(c);
+        stackList s = new stackList();
+        //s.push(c);
         //s.showStack();
-        s.push(10);
-        s.showStack();
-        Palindromo.Pal();
+        //s.push(10);
+        //s.showStack();
+        Palindromo.Pal(Palindromo.createS());
+        Palindromo p = new Palindromo();
+        p.Palindromo();
     }
     
     
