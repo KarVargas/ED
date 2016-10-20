@@ -43,7 +43,7 @@ public class Balanceo {
                 s.pop();
             }
         }*/
-        char ch[] = exp.toCharArray();
+        //char ch[] = exp.toCharArray();
         for(int i = 0; i < e.length; i++) {
             if (e[i] == '(') {
                 s.push(e[i]);
@@ -55,26 +55,36 @@ public class Balanceo {
                 s.push(e[i]);
                 //c++;
             } else if (e[i] == ')') {
-                if (s.getTop().getData().equals("(")) {
+                if (s.isEmpty()){
+                    return false;
+                } else if (s.getTop().getData().equals('(')) {
                     s.pop();
                 } else {
                     return false;
                 }
             } else if (e[i] == '}') {
-                if (s.getTop().getData().equals("[")) {
+                if (s.isEmpty()){
+                    return false;
+                } else if (s.getTop().getData().equals('{')) {
                     s.pop();
                 } else {
                     return false;
                 }
             } else if (e[i] == ']') {
-                if (s.getTop().getData().equals("{")) {
+                if (s.isEmpty()){
+                    return false;
+                } else if (s.getTop().getData().equals('[')) {
                     s.pop();
                 } else {
                     return false;
                 }
             }
         }
-        return true;
+        if(s.isEmpty()){
+            return true;
+        } else {
+            return false;
+        }
     }
     
     /*private static char[] por(char a[]) {
