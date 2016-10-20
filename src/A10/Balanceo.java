@@ -70,7 +70,7 @@ public class Balanceo {
                 } else {
                     return false;
                 }
-            } else if (e[i] == ']') { ////
+            } else if (e[i] == ']') { //
                 if (s.isEmpty()){
                     return false;
                 } else if (s.getTop().getData().equals('[')) {
